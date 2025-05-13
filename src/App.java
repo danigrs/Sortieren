@@ -18,6 +18,7 @@ public class App {
         Ausgabe.liste(randomList);
         Ausgabe.insertSort();
         insertSortedList.sortiere(randomList);
+        Ausgabe.liste(insertSortedList.sortiere(randomList));
         Ausgabe.zeit(0);
     }
 }
