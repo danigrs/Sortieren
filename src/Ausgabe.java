@@ -10,4 +10,20 @@ public class Ausgabe {
         }
         System.out.println();
     }
+
+    public static void mergeSort(){
+        System.out.println("Sortiert mit mergeSort!");
+    }
+
+    public static void quickSort(){
+        System.out.println("Sortiert mit quickSort!");        
+    }
+
+    public static void insertSort(){
+        System.out.println("Sortiert mit insertSort!");
+    }
+
+    public static void zeit(long millis){
+        System.out.println("Benötigte Rechenzeit: 0." + millis + "s");
+    }
 }
