@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Ausgabe {
     public static void liste(ArrayList<Integer> list){
         for (int i = 1; i <= list.size(); i++){
-            System.out.print(list.get(i) + " ");
+            System.out.print(list.get(i-1) + " ");
             if (i % 30 == 0){
                 System.out.println();
             }

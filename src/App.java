@@ -4,6 +4,7 @@ import java.util.Random;
 public class App {
     public static void main(String[] args) throws Exception {
       	ArrayList<Integer> randomList = new ArrayList<Integer>();
+        insertSortierer insertSortedList = new insertSortierer(randomList);
 
         for (int i = 0; i < 500; i++){
             Random random = new Random();
@@ -13,5 +14,10 @@ public class App {
 
         // System.out.println(randomList);
 
+        // Test aus Aufgabe 3
+        Ausgabe.liste(randomList);
+        Ausgabe.insertSort();
+        insertSortedList.sortiere(randomList);
+        Ausgabe.zeit(0);
     }
 }

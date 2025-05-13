@@ -10,11 +10,13 @@ abstract class Sortierer {
         this.liste = new ArrayList<Integer>(liste);
     }
 
+    // remove body to fix error
     abstract protected ArrayList<Integer> sortiere(ArrayList<Integer> list){
         messung1 = System.currentTimeMillis();
         // sortiere
         messung2 = System.currentTimeMillis();
         // return ArrayList
+        return list;
     }
 
     public ArrayList<Integer> sortiere(){
