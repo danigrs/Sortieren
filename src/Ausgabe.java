@@ -27,7 +27,6 @@ public class Ausgabe {
     }
 
     public static void zeit(long millis){
-        System.out.println();
         System.out.println("Benötigte Rechenzeit: 0." + millis + "s");
     }
 }

@@ -3,27 +3,34 @@ import java.util.Random;
 
 public class App {
     public static void main(String[] args) throws Exception {
-      	ArrayList<Integer> randomList = new ArrayList<Integer>();
-        insertSortierer insertSortedList = new insertSortierer(randomList);
-        quickSortierer quickSortedList = new quickSortierer(randomList);
+        ArrayList<Integer> randomList = new ArrayList<Integer>();
 
-
-        for (int i = 0; i < 500; i++){
+        // Generiere eine zufällige Liste
+        for (int i = 0; i < 500; i++) {
             Random random = new Random();
             int randomInt = random.nextInt(2014 - 1900) + 1900;
             randomList.add(randomInt);
         }
 
-        // System.out.println(randomList);
-
-        // Test aus Aufgabe 3
+        // Ausgabe der unsortierten Liste
         Ausgabe.liste(randomList);
+
+        // Verwende die abstrakte Klasse Sortierer
+        Sortierer insertSortierer = new insertSortierer(randomList);
+        Sortierer quickSortierer = new quickSortierer(randomList);
+
+        // Insertion Sort
         Ausgabe.insertSort();
-        insertSortedList.sortiere(randomList);
-        Ausgabe.liste(insertSortedList.sortiere(randomList));
-        // Ausgabe.zeit(0);
+        ArrayList<Integer> insertSortedList = insertSortierer.sortiere();
+        Ausgabe.liste(insertSortedList);
+        Ausgabe.zeit(insertSortierer.getOperations());
+        // System.out.println("InsertSort Zeit: " + insertSortierer.getOperations() + " ms");
+
+        // Quick Sort
         Ausgabe.quickSort();
-        quickSortedList.quickSort(randomList);
-        Ausgabe.liste(quickSortedList.quickSort(randomList));
+        ArrayList<Integer> quickSortedList = quickSortierer.sortiere();
+        Ausgabe.liste(quickSortedList);
+        Ausgabe.zeit(quickSortierer.getOperations());
+        // System.out.println("QuickSort Zeit: " + quickSortierer.getOperations() + " ms");
     }
 }

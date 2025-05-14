@@ -1,16 +1,12 @@
 import java.util.ArrayList;
 
-public class insertSortierer {
+public class insertSortierer extends Sortierer { // Erbt von Sortierer
     
     public insertSortierer(ArrayList<Integer> liste){
-        super();
+        super(liste);
     }
 
     protected ArrayList<Integer> sortiere(ArrayList<Integer> list){
-        // messung1 = System.currentTimeMillis();
-        // sortiere
-        // messung2 = System.currentTimeMillis();
-
         ArrayList<Integer> liste = new ArrayList<Integer>(list);
 
         int j, help;

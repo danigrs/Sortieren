@@ -1,17 +1,12 @@
 import java.util.ArrayList;
 
-
-public class quickSortierer {
+public class quickSortierer extends Sortierer { // Erbt von Sortierer
 
     public quickSortierer(ArrayList<Integer> liste){
-        super();
+        super(liste);
     }
 
-        protected ArrayList<Integer> quickSort(ArrayList<Integer> list){
-        // messung1 = System.currentTimeMillis();
-        // sortiere
-        // messung2 = System.currentTimeMillis();
-
+        protected ArrayList<Integer> sortiere(ArrayList<Integer> list){
         ArrayList<Integer> ersteListe = new ArrayList<Integer>();
         ArrayList<Integer> zweiteListe = new ArrayList<Integer>();
         ArrayList<Integer> sortierteListe = new ArrayList<Integer>();
@@ -28,12 +23,10 @@ public class quickSortierer {
                     zweiteListe.add(list.get(i));
                 }
             }
-            sortierteListe.addAll(quickSort(ersteListe));
+            sortierteListe.addAll(sortiere(ersteListe));
             sortierteListe.add(pivotElement);
-            sortierteListe.addAll(quickSort(zweiteListe));
+            sortierteListe.addAll(sortiere(zweiteListe));
         }
-
-
 
         return sortierteListe;
     }

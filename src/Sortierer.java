@@ -10,17 +10,13 @@ abstract class Sortierer {
         this.liste = new ArrayList<Integer>(liste);
     }
 
-    // remove body to fix error
-    abstract protected ArrayList<Integer> sortiere(ArrayList<Integer> list){
-        messung1 = System.currentTimeMillis();
-        // sortiere
-        messung2 = System.currentTimeMillis();
-        // return ArrayList
-        return list;
-    }
+    abstract protected ArrayList<Integer> sortiere(ArrayList<Integer> list);
 
-    public ArrayList<Integer> sortiere(){
-        return sortiere(liste);
+    public ArrayList<Integer> sortiere() {
+        messung1 = System.currentTimeMillis(); // Startzeit
+        ArrayList<Integer> result = sortiere(liste); // Sortierlogik aufrufen
+        messung2 = System.currentTimeMillis(); // Endzeit
+        return result;
     }
 
     public long getOperations(){
