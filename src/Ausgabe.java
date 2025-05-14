@@ -12,18 +12,22 @@ public class Ausgabe {
     }
 
     public static void mergeSort(){
+        System.out.println();
         System.out.println("Sortiert mit mergeSort!");
     }
 
     public static void quickSort(){
+        System.out.println();
         System.out.println("Sortiert mit quickSort!");        
     }
 
     public static void insertSort(){
+        System.out.println();
         System.out.println("Sortiert mit insertSort!");
     }
 
     public static void zeit(long millis){
+        System.out.println();
         System.out.println("Benötigte Rechenzeit: 0." + millis + "s");
     }
 }

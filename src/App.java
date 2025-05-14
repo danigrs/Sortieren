@@ -5,6 +5,8 @@ public class App {
     public static void main(String[] args) throws Exception {
       	ArrayList<Integer> randomList = new ArrayList<Integer>();
         insertSortierer insertSortedList = new insertSortierer(randomList);
+        quickSortierer quickSortedList = new quickSortierer(randomList);
+
 
         for (int i = 0; i < 500; i++){
             Random random = new Random();
@@ -19,6 +21,9 @@ public class App {
         Ausgabe.insertSort();
         insertSortedList.sortiere(randomList);
         Ausgabe.liste(insertSortedList.sortiere(randomList));
-        Ausgabe.zeit(0);
+        // Ausgabe.zeit(0);
+        Ausgabe.quickSort();
+        quickSortedList.quickSort(randomList);
+        Ausgabe.liste(quickSortedList.quickSort(randomList));
     }
 }
