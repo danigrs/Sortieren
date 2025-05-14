@@ -24,13 +24,11 @@ public class App {
         ArrayList<Integer> insertSortedList = insertSortierer.sortiere();
         Ausgabe.liste(insertSortedList);
         Ausgabe.zeit(insertSortierer.getOperations());
-        // System.out.println("InsertSort Zeit: " + insertSortierer.getOperations() + " ms");
 
         // Quick Sort
         Ausgabe.quickSort();
         ArrayList<Integer> quickSortedList = quickSortierer.sortiere();
         Ausgabe.liste(quickSortedList);
         Ausgabe.zeit(quickSortierer.getOperations());
-        // System.out.println("QuickSort Zeit: " + quickSortierer.getOperations() + " ms");
     }
 }
