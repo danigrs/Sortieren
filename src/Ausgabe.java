@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Ausgabe {
     public static void liste(ArrayList<Integer> list){
+        // fängt bei 1 an, weil sonst Zeilenumbruch nach erstem Element
         for (int i = 1; i <= list.size(); i++){
             System.out.print(list.get(i-1) + " ");
             if (i % 30 == 0){

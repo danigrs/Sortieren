@@ -6,6 +6,7 @@ abstract class Sortierer {
     long messung2;
     
 
+    // Erstellt Kopie der übergebenen Liste, um Seiteneffekte zu vermeiden
     public Sortierer(ArrayList<Integer> liste){
         this.liste = new ArrayList<Integer>(liste);
     }
@@ -14,9 +15,9 @@ abstract class Sortierer {
 
     public ArrayList<Integer> sortiere() {
         messung1 = System.currentTimeMillis(); // Startzeit
-        ArrayList<Integer> result = sortiere(liste); // Sortierlogik aufrufen
+        ArrayList<Integer> result = sortiere(liste); // Sortierlogik aufrufen und Ergebnis speichern
         messung2 = System.currentTimeMillis(); // Endzeit
-        return result;
+        return result; // Sortierte Liste zurückgeben
     }
 
     public long getOperations(){
